@@ -16,7 +16,7 @@ for index, row in collection.iterrows():
         played = cartas_data[card]
         if quantity > played:
             vender_df = vender_df._append({'Card': card, 'Quantity': quantity - played}, ignore_index=True)
-        else:
+        elif quantity != played:
             comprar_df = comprar_df._append({'Card': card, 'Quantity': played - quantity}, ignore_index=True)
     else:
         vender_df = vender_df._append({'Card': card, 'Quantity': quantity }, ignore_index=True)
