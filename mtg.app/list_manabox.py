@@ -6,8 +6,7 @@ with open('mtg.list_manabox.txt', 'r', encoding='utf-8') as file:
     cartas = file.readlines()
 
 cards = {}
-comprar_df = pd.DataFrame(columns=['Card', 'Quantity'])
-no_comprar_df = pd.DataFrame(columns=['Card'])
+comprar_df = pd.DataFrame(columns=['Card', 'Quantity', 'Formato'])
 
 for carta in cartas:
     if not carta.startswith('Deck'):
@@ -28,9 +27,9 @@ for card in cards:
         if card in collection_df['Card'].values:
             quantity = collection_df.loc[collection_df['Card'] == card, 'Quantity'].values[0] 
             if played >= quantity:
-                comprar_df = comprar_df._append({'Card': card, 'Quantity': played - quantity}, ignore_index=True)
+                comprar_df = comprar_df._append({'Card': card, 'Quantity': played - quantity, 'Formato': formato}, ignore_index=True)
         else:
-            comprar_df = comprar_df._append({'Card': card, 'Quantity': played}, ignore_index=True)
+            comprar_df = comprar_df._append({'Card': card, 'Quantity': played, 'Formato': formato}, ignore_index=True)
 
 print("Cartas a comprar:")
 if comprar_df.empty:
