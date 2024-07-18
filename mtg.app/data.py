@@ -7,12 +7,6 @@ import math
 df = pd.DataFrame(columns=['Card', 'Played', 'Formato'])
 
 urls = [
-    ("https://www.mtggoldfish.com/format-staples/modern/full/creatures", "Modern"),
-    ("https://www.mtggoldfish.com/format-staples/modern/full/spells", "Modern"),
-    ("https://www.mtggoldfish.com/format-staples/modern/full/lands", "Modern"),
-    ("https://www.mtggoldfish.com/format-staples/pioneer/full/creatures", "Pioneer"),
-    ("https://www.mtggoldfish.com/format-staples/pioneer/full/spells", "Pioneer"),
-    ("https://www.mtggoldfish.com/format-staples/pioneer/full/lands", "Pioneer"),
     ("https://www.mtggoldfish.com/format-staples/pauper/full/creatures", "Pauper"),
     ("https://www.mtggoldfish.com/format-staples/pauper/full/spells", "Pauper"),
     ("https://www.mtggoldfish.com/format-staples/pauper/full/lands", "Pauper")
