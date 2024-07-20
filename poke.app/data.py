@@ -53,4 +53,4 @@ df.columns = ['Name', 'Value']
 
 print(df)
 
-df.to_csv('poke.data.csv', index=False, header=False)
+df.to_csv('poke.data.csv', index=False)
