@@ -41,4 +41,4 @@ for url, formato in urls:
 
     print(f"Agregado {url}")
 
-df.to_csv('mtg.data.csv', index=False)
+df.to_csv('mtg.data.pauper.csv', index=False)
