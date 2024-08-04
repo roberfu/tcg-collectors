@@ -51,6 +51,4 @@ driver.quit()
 df = pd.DataFrame.from_dict(resultados, orient='index').reset_index()
 df.columns = ['Name', 'Value']
 
-print(df)
-
-df.to_csv('poke.data.csv', index=False)
+df.to_csv('poke.data.csv', index=False, header=False)
